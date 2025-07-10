@@ -24,9 +24,12 @@ namespace Interfaces.Entities
 
         public override string ToString()
         {
-            return BasicPayment.ToString("F2", System.Globalization.CultureInfo.InvariantCulture) +
-                   " + " + Tax.ToString("F2", System.Globalization.CultureInfo.InvariantCulture) +
-                   " = " + TotalPayment.ToString("F2", System.Globalization.CultureInfo.InvariantCulture);
+            return "Basic payment: $ "
+                + BasicPayment.ToString("F2")
+                + "\nTax: $ "
+                + Tax.ToString("F2")
+                + "\nTotal payment: $ "
+                + TotalPayment.ToString("F2");
         }
 
     }
