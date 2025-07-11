@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,11 +26,11 @@ namespace Interfaces.Entities
         public override string ToString()
         {
             return "Basic payment: $ "
-                + BasicPayment.ToString("F2")
+                + BasicPayment.ToString("F2", CultureInfo.InvariantCulture)
                 + "\nTax: $ "
-                + Tax.ToString("F2")
+                + Tax.ToString("F2", CultureInfo.InvariantCulture)
                 + "\nTotal payment: $ "
-                + TotalPayment.ToString("F2");
+                + TotalPayment.ToString("F2", CultureInfo.InvariantCulture);
         }
 
     }
