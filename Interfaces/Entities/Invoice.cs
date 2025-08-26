@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
 namespace Interfaces.Entities
 {
@@ -18,12 +13,12 @@ namespace Interfaces.Entities
             Tax = tax;
         }
 
-        public double TotalPayment
+        public double TotalPayment  //Propriedade calculada.
         {
             get { return BasicPayment + Tax; }
         }
 
-        public override string ToString()
+        public override string ToString() //Impressão do Invoice
         {
             return "Basic payment: $ "
                 + BasicPayment.ToString("F2", CultureInfo.InvariantCulture)

@@ -10,7 +10,6 @@ Console.WriteLine("Pickup (dd/MM/yyyy HH:mm): ");
 DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture );
 Console.WriteLine("Return (dd/MM/yyyy HH:mm): ");
 DateTime finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
-
 Console.WriteLine("Enter price por houer: ");
 double houer = double.Parse(Console.ReadLine());
 Console.WriteLine("Enter price por day: ");

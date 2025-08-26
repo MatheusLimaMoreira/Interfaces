@@ -25,7 +25,7 @@ namespace Interfaces.Services
 
         public void processInvoice(CarRental carRental) 
         {
-            TimeSpan duration = carRental.Finish.Subtract(carRental.Start);
+            TimeSpan duration = carRental.Finish.Subtract(carRental.Start); //Duração da locação
 
             double basicPayment = 0.0;
             if (duration.TotalHours <= 12.0)
@@ -37,7 +37,7 @@ namespace Interfaces.Services
                 basicPayment = pricePerDay * Math.Ceiling(duration.TotalDays);
             }
 
-            double tax = _taxService.Tax(basicPayment);
+            double tax = _taxService.Tax(basicPayment); 
 
             carRental.Invoice = new Invoice(basicPayment, tax); 
 
