@@ -1,18 +1,24 @@
 ﻿
-
+using ExercicioFixacao.Entities;
 using Microsoft.VisualBasic;
 
 namespace ExercicioFixacao.Entities
 {
     internal class Installments
     {
-        public  DueDate Date { get; set; }
+        public  DateTime DueDate { get; set; }
         public double Amount { get; set; }
 
-        public Installments(DueDate date, double amount)
+        public Installments(DateTime dueDate, double amount)
         {
-            Date = date;
+            DueDate = dueDate;
             Amount = amount;
+        }
+
+        public override string ToString()  
+        {
+            return DueDate.ToString("dd/MM/yyyy") 
+                + " - " + Amount.ToString("F2");
         }
     }
 }
